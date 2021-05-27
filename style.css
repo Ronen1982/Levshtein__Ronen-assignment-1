@@ -1,0 +1,612 @@
+:root {
+  --primary: hsla(340, 16%, 96%, 0.75);
+}
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 60%;
+  height: 950px;
+  display: block;
+  background: #d5d5d5;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.box .title h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 34px;
+  padding-top: 10px;
+  width: 100%;
+}
+.box .title h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  color: rgb(73, 71, 71);
+  width: 100%;
+}
+.box .title span {
+  font-weight: bold;
+}
+
+/* Box & Grid */
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerContainer {
+  display: grid;
+  grid-template-areas:
+    "pic0 pic0 pic0"
+    "pic1 pic1 pic6"
+    "pic3 pic4 pic2"
+    "pic3 pic4 pic2"
+    "pic5 pic5 pic5"
+    "pic7 pic7 pic7";
+  gap: 2%;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+/*  Images */
+
+.title {
+  grid-area: pic0;
+  width: 100%;
+}
+.box-1 {
+  background: url(city-skyline.jpg) no-repeat center center / cover;
+  grid-area: pic1;
+  width: 100%;
+  height: 150px;
+}
+.box-2 {
+  background: url(old-city-hall.jpg) no-repeat center center / cover;
+  grid-area: pic2;
+  width: 200px;
+  height: 300px;
+}
+.box-3 {
+  background: url(new-city-hall.jpg) no-repeat center center / cover;
+  grid-area: pic3;
+  width: 200px;
+  height: 300px;
+}
+.box-4 {
+  background: url(cn-tower.jpg) no-repeat center center / cover;
+  grid-area: pic4;
+  width: 200px;
+  height: 300px;
+}
+.box-5 {
+  background: url(rogers-center.jpg) no-repeat center center / cover;
+  grid-area: pic5;
+  width: 100%;
+  height: 150px;
+}
+.box-6 {
+  background: url(rom.jpg) no-repeat center center / cover;
+  grid-area: pic6;
+  width: 100%x;
+  height: 150px;
+}
+.box-7 {
+  grid-area: pic7;
+  width: 100%x;
+  height: 150px;
+}
+
+/* Hover Effect */
+
+.box-1:hover {
+  background: linear-gradient(
+      to bottom right,
+      var(--primary) 50%,
+      transparent 50%
+    ),
+    url(city-skyline.jpg) no-repeat center center / cover;
+}
+.box-2:hover {
+  background: linear-gradient(
+      to bottom right,
+      var(--primary) 50%,
+      transparent 50%
+    ),
+    url(old-city-hall.jpg) no-repeat center center / cover;
+}
+.box-3:hover {
+  background: linear-gradient(
+      to bottom right,
+      var(--primary) 50%,
+      transparent 50%
+    ),
+    url(new-city-hall.jpg) no-repeat center center / cover;
+}
+.box-4:hover {
+  background: linear-gradient(
+      to bottom right,
+      var(--primary) 50%,
+      transparent 50%
+    ),
+    url(cn-tower.jpg) no-repeat center center / cover;
+}
+.box-5:hover {
+  background: linear-gradient(
+      to bottom right,
+      var(--primary) 50%,
+      transparent 50%
+    ),
+    url(rogers-center.jpg) no-repeat center center / cover;
+}
+.box-6:hover {
+  background: linear-gradient(
+      to bottom right,
+      var(--primary) 50%,
+      transparent 50%
+    ),
+    url(rom.jpg) no-repeat center center / cover;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  margin: 0;
+}
+
+.box-1:hover .middle {
+  opacity: 1;
+}
+.box-2:hover .middle {
+  opacity: 1;
+}
+.box-3:hover .middle {
+  opacity: 1;
+}
+.box-4:hover .middle {
+  opacity: 1;
+}
+.box-5:hover .middle {
+  opacity: 1;
+}
+.box-6:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  padding-left: 10px;
+}
+.text h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  font-size: 13px;
+}
+.text p {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+/* Social Media Links */
+
+.links a {
+  text-decoration: none;
+}
+
+.links i {
+  z-index: 1000;
+  color: black;
+  width: 50px;
+  height: 40px;
+  width: 30px;
+  height: 50px;
+  padding-top: 30px;
+}
+.links i:hover {
+  color: blue;
+  transform: scale(1.5);
+}
+
+/* Media */
+
+@media (max-width: 1100px) {
+  .box {
+    width: 60%;
+    height: 1200px;
+    display: block;
+    background: #d5d5d5;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .innerContainer {
+    display: grid;
+    grid-template-areas:
+      "pic0 pic0"
+      "pic1 pic2"
+      "pic3 pic4"
+      "pic3 pic5"
+      "pic6 pic6"
+      "pic7 pic7";
+    gap: 2%;
+    width: 80%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
+  .title {
+    grid-area: pic0;
+    width: 100%;
+  }
+  .box-1 {
+    background: url(city-skyline.jpg) no-repeat center center / cover;
+    grid-area: pic1;
+    width: 100%;
+    height: 200px;
+  }
+  .box-2 {
+    background: url(old-city-hall.jpg) no-repeat center center / cover;
+    grid-area: pic2;
+    width: 100%;
+    height: 200px;
+  }
+  .box-3 {
+    background: url(new-city-hall.jpg) no-repeat center center / cover;
+    grid-area: pic3;
+    width: 180px;
+    height: 435px;
+  }
+  .box-4 {
+    background: url(cn-tower.jpg) no-repeat center center / cover;
+    grid-area: pic4;
+    width: 180px;
+    height: 200px;
+  }
+  .box-5 {
+    background: url(rogers-center.jpg) no-repeat center center / cover;
+    grid-area: pic5;
+    width: 100%;
+    height: 200px;
+  }
+  .box-6 {
+    background: url(rom.jpg) no-repeat center center / cover;
+    grid-area: pic6;
+    width: 100%x;
+    height: 200px;
+  }
+}
+
+@media (max-width: 861px) {
+  .box {
+    width: 60%;
+    height: 1100px;
+    display: block;
+    background: #d5d5d5;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .innerContainer {
+    display: grid;
+    grid-template-areas:
+      "pic0"
+      "pic1"
+      "pic2"
+      "pic3"
+      "pic4"
+      "pic5"
+      "pic6"
+      "pic7";
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: 0.5s;
+  }
+  .title {
+    grid-area: pic0;
+    width: 100%;
+  }
+  .box-1 {
+    background: url(city-skyline.jpg) no-repeat center center / cover;
+    grid-area: pic1;
+    width: 340px;
+    height: 120px;
+  }
+  .box-2 {
+    background: url(old-city-hall.jpg) no-repeat center center / cover;
+    grid-area: pic2;
+    width: 340px;
+    height: 120px;
+  }
+  .box-3 {
+    background: url(new-city-hall.jpg) no-repeat center center / cover;
+    grid-area: pic3;
+    width: 340px;
+    height: 120px;
+  }
+  .box-4 {
+    background: url(cn-tower.jpg) no-repeat center center / cover;
+    grid-area: pic4;
+    width: 340px;
+    height: 120px;
+  }
+  .box-5 {
+    background: url(rogers-center.jpg) no-repeat center center / cover;
+    grid-area: pic5;
+    width: 340px;
+    height: 120px;
+  }
+  .box-6 {
+    background: url(rom.jpg) no-repeat center center / cover;
+    grid-area: pic6;
+    width: 340px;
+    height: 120px;
+  }
+  .text p {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 615px) {
+  .box {
+    width: 60%;
+    height: 1100px;
+    display: block;
+    background: #d5d5d5;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .innerContainer {
+    display: grid;
+    grid-template-areas:
+      "pic0"
+      "pic1"
+      "pic2"
+      "pic3"
+      "pic4"
+      "pic5"
+      "pic6"
+      "pic7";
+    gap: 2%;
+    margin-left: 60px;
+    width: 100%;
+    transition: 0.5s;
+  }
+  .box-1 {
+    background: url(city-skyline.jpg) no-repeat center center / cover;
+    grid-area: pic1;
+    width: 250px;
+    height: 120px;
+  }
+  .box-2 {
+    background: url(old-city-hall.jpg) no-repeat center center / cover;
+    grid-area: pic2;
+    width: 250px;
+    height: 120px;
+  }
+  .box-3 {
+    background: url(new-city-hall.jpg) no-repeat center center / cover;
+    grid-area: pic3;
+    width: 250px;
+    height: 120px;
+  }
+  .box-4 {
+    background: url(cn-tower.jpg) no-repeat center center / cover;
+    grid-area: pic4;
+    width: 250px;
+    height: 120px;
+  }
+  .box-5 {
+    background: url(rogers-center.jpg) no-repeat center center / cover;
+    grid-area: pic5;
+    width: 250px;
+    height: 120px;
+  }
+  .box-6 {
+    background: url(rom.jpg) no-repeat center center / cover;
+    grid-area: pic6;
+    width: 250px;
+    height: 120px;
+  }
+  .text p {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+  }
+}
+@media (max-width: 560px) {
+  .box {
+    width: 60%;
+    height: 1200px;
+    display: block;
+    background: #d5d5d5;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .innerContainer {
+    display: grid;
+    grid-template-areas:
+      "pic0"
+      "pic1"
+      "pic2"
+      "pic3"
+      "pic4"
+      "pic5"
+      "pic6"
+      "pic7";
+    gap: 2%;
+    margin-left: 60px;
+    width: 100%;
+    transition: 0.5s;
+  }
+  .box-1 {
+    background: url(city-skyline.jpg) no-repeat center center / cover;
+    grid-area: pic1;
+    width: 220px;
+    height: 120px;
+  }
+  .box-2 {
+    background: url(old-city-hall.jpg) no-repeat center center / cover;
+    grid-area: pic2;
+    width: 220px;
+    height: 120px;
+  }
+  .box-3 {
+    background: url(new-city-hall.jpg) no-repeat center center / cover;
+    grid-area: pic3;
+    width: 220px;
+    height: 120px;
+  }
+  .box-4 {
+    background: url(cn-tower.jpg) no-repeat center center / cover;
+    grid-area: pic4;
+    width: 220px;
+    height: 120px;
+  }
+  .box-5 {
+    background: url(rogers-center.jpg) no-repeat center center / cover;
+    grid-area: pic5;
+    width: 220px;
+    height: 120px;
+  }
+  .box-6 {
+    background: url(rom.jpg) no-repeat center center / cover;
+    grid-area: pic6;
+    width: 220px;
+    height: 120px;
+  }
+  .text p {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+  }
+}
+@media (max-width: 510px) {
+  .box {
+    width: 60%;
+    height: 1200px;
+    display: block;
+    background: #d5d5d5;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .innerContainer {
+    display: grid;
+    grid-template-areas:
+      "pic0"
+      "pic1"
+      "pic2"
+      "pic3"
+      "pic4"
+      "pic5"
+      "pic6"
+      "pic7";
+    gap: 2%;
+    margin-left: 60px;
+    width: 100%;
+    transition: 0.5s;
+  }
+  .box-1 {
+    background: url(city-skyline.jpg) no-repeat center center / cover;
+    grid-area: pic1;
+    width: 200px;
+    height: 120px;
+  }
+  .box-2 {
+    background: url(old-city-hall.jpg) no-repeat center center / cover;
+    grid-area: pic2;
+    width: 200px;
+    height: 120px;
+  }
+  .box-3 {
+    background: url(new-city-hall.jpg) no-repeat center center / cover;
+    grid-area: pic3;
+    width: 200px;
+    height: 120px;
+  }
+  .box-4 {
+    background: url(cn-tower.jpg) no-repeat center center / cover;
+    grid-area: pic4;
+    width: 200px;
+    height: 120px;
+  }
+  .box-5 {
+    background: url(rogers-center.jpg) no-repeat center center / cover;
+    grid-area: pic5;
+    width: 200px;
+    height: 120px;
+  }
+  .box-6 {
+    background: url(rom.jpg) no-repeat center center / cover;
+    grid-area: pic6;
+    width: 200px;
+    height: 120px;
+  }
+  .text p {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+  }
+}
